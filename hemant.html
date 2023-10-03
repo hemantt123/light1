@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .hero{
+        background: #1d2026;
+        min-height: 100vh;
+        width: 100%;
+        color: #fff;
+        position: relative;
+    }
+    .img1{
+        height: 100px;
+        margin-bottom: 50px;
+        
+    }
+
+    .img2{
+        height: 80px;
+        margin-bottom: 60px;
+    }
+    nav{
+        display: flex;
+        align-items: center;
+    }
+    nav.img1{
+        cursor: pointer;
+        width: 25px;
+        margin-right: 20px;
+    }
+    nav.img2{
+        cursor: pointer;
+        width: 160px;
+        margin-right: 20px;
+    }
+    nav ul{
+        flex: 1;
+        
+        text-align: right;
+        
+    }
+    nav ul li{
+        list-style: none;
+        display: inline-block;
+        margin: 0 20px;
+    }
+    nav ul li a{
+        text-decoration: none;
+        color: white;
+    }
+    button{
+        background-color: #efefef;
+        height: 30px;
+        width: 60px;
+        border-radius: 10px;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+        transition: background 0.5s;
+    }
+    button span{
+        display: block;
+        background: #999;
+        height: 26px;
+        width: 26px;
+        border-radius: 50%;
+        margin-left: 2px;
+        transition: background 0.5s; margin-left: 0.5s;
+
+    }
+    .lamp{
+        position: absolute;
+        top: 0;
+        left: 13%;
+        width: 210px;
+    }
+    
+    .light{
+        
+       position: relative;
+       bottom: 80px;
+       right: 50px;
+       opacity: 0;
+       transition: opacity0.5s;
+      
+     
+      
+        
+
+    
+    }
+    .text{
+        max-width: 600px;
+        margin-top: 7%;
+        margin-left: 50%;
+      
+    }
+    .text h1{
+       
+        font-size: xx-large;
+        
+    }
+   .text a{
+        text-decoration: none;
+        color: white;
+        background-color: #00986f;
+        display: inline-block;
+        font-size: 18px;
+        margin-top: 30px;
+        padding: 14px 40px;
+        border-radius: 30px;
+    }
+    .active{
+        background-color: green;
+    }
+    .active span{
+        background-color: #fff;
+        margin-left: 31px;
+    }
+    .on{
+        opacity: 1;
+    }
+
+    @media(min-width:730px) and (max-width:120px){
+.hero{
+    flex-direction: column-reverse;
+    gap: 20px;
+}
+
+    }
+
+
+    @media(min-width:120px) and (max-width:600px){
+body{
+       background-color:  #1d2026;
+       position: absolute;
+}
+
+    }
+
+    @media(min-width:120px) and (max-width:600px){
+.light{
+       right: 30px;
+
+    }
+</style>
+<body>
+    <div class="hero">
+        <nav>
+            <img src="https://i.pinimg.com/originals/26/9d/d1/269dd16fa1f5ff51accd09e7e1602267.png" alt="" class="img2">
+            <img src="./logo.png" alt="" class="img1">
+            <ul>
+
+                <li> <a href="#">Latest</a> </li>
+                <li><a href="#">Modern</a> </li>
+                <li> <a href="">Contemporary </a></li>
+                <li> <a href="">Affordable </a> </li>
+            </ul>
+            <button type="button" onclick="toggleBtn()" id="btn"><span></span></button>
+        </nav>
+          <div class="text">
+            <h1>Latest <br> In Lighting</h1>
+            <p>This is the First lamp From our company. We're makeing a huge collection of modern Lamps in all categories from home use to office use.</p>
+            <a href="">Check All Collections</a>
+
+
+
+        </div>
+
+      
+
+        <div class="container">
+
+            <img src="./lamp.png"  class="lamp">
+            <img src="./light.png" alt="" class="light" id="light">
+        </div>
+
+        <!-- <div class="text">
+            <h1>Latest <br> In Lighting</h1>
+            <p>This is the First lamp From our company. We're makeing a huge collection of modern Lamps in all categories from home use to office use.</p>
+            <a href="">Check All Collections</a>
+
+
+
+        </div> -->
+
+
+    </div>
+
+    <script>
+         var btn = document.getElementById("btn");
+         var light = document.getElementById("light");
+
+         function toggleBtn(){
+            btn.classList.toggle("active");
+            light.classList.toggle("on");
+
+         }
+
+
+    </script>
+    
+</body>
+</html>
